@@ -1,0 +1,111 @@
+
+#include <unistd.h>
+#include <cdsface.h>
+#include <cdshead.h>
+
+#include "globals.h"
+#include "SigChange.h"
+#include "typeBPO.h"
+  char *pRN17D01SA1;
+  char *pRN17D01SA2;
+  char *pRN21S05SA1;
+  char *pRN21S05SA2;
+  char *pRN21S06SA1;
+  char *pRN21S06SA2;
+  char *pRN21S05NN;
+  char *pRN21S05SG;
+  char *pRN21S05SO;
+  char *pRN21S05SY;
+  char *pRN21S05SZ;
+  char *pRN21S06NN;
+  char *pRN21S06SG;
+  char *pRN21S06SO;
+  char *pRN21S06SY;
+  char *pRN21S06SZ;
+  char *pRN21S05SGM;
+  char *pRN21S05SGR;
+  char *pRN21S05SYM;
+  char *pRN21S05SYR;
+  char *pRN21S06SGM;
+  char *pRN21S06SGR;
+  char *pRN21S06SYM;
+  char *pRN21S06SYR;
+
+  void Init_P()
+ {
+  GET_REF(pRN17D01SA1,char,DEF_DI_BY_ID,0);
+  GET_REF(pRN17D01SA2,char,DEF_DI_BY_ID,1);
+  GET_REF(pRN21S05SA1,char,DEF_DI_BY_ID,2);
+  GET_REF(pRN21S05SA2,char,DEF_DI_BY_ID,3);
+  GET_REF(pRN21S06SA1,char,DEF_DI_BY_ID,4);
+  GET_REF(pRN21S06SA2,char,DEF_DI_BY_ID,5);
+  GET_REF(pRN21S05NN,char,DEF_DO_BY_ID,0);
+  GET_REF(pRN21S05SG,char,DEF_DO_BY_ID,1);
+  GET_REF(pRN21S05SO,char,DEF_DO_BY_ID,2);
+  GET_REF(pRN21S05SY,char,DEF_DO_BY_ID,3);
+  GET_REF(pRN21S05SZ,char,DEF_DO_BY_ID,4);
+  GET_REF(pRN21S06NN,char,DEF_DO_BY_ID,5);
+  GET_REF(pRN21S06SG,char,DEF_DO_BY_ID,6);
+  GET_REF(pRN21S06SO,char,DEF_DO_BY_ID,7);
+  GET_REF(pRN21S06SY,char,DEF_DO_BY_ID,8);
+  GET_REF(pRN21S06SZ,char,DEF_DO_BY_ID,9);
+  GET_REF(pRN21S05SGM,char,DEF_PFD_BY_ID,0);
+  GET_REF(pRN21S05SGR,char,DEF_PFD_BY_ID,1);
+  GET_REF(pRN21S05SYM,char,DEF_PFD_BY_ID,2);
+  GET_REF(pRN21S05SYR,char,DEF_PFD_BY_ID,3);
+  GET_REF(pRN21S06SGM,char,DEF_PFD_BY_ID,4);
+  GET_REF(pRN21S06SGR,char,DEF_PFD_BY_ID,5);
+  GET_REF(pRN21S06SYM,char,DEF_PFD_BY_ID,6);
+  GET_REF(pRN21S06SYR,char,DEF_PFD_BY_ID,7);
+  };
+
+  void Read_Sig()
+  {
+	////// сигналы DI 
+  _RN17D01SA1=(bool)*pRN17D01SA1;
+  _RN17D01SA2=(bool)*pRN17D01SA2;
+  _RN21S05SA1=(bool)*pRN21S05SA1;
+  _RN21S05SA2=(bool)*pRN21S05SA2;
+  _RN21S06SA1=(bool)*pRN21S06SA1;
+  _RN21S06SA2=(bool)*pRN21S06SA2;
+	////// сигналы PFD 
+  _RN21S05SGM=(bool)*pRN21S05SGM;
+  _RN21S05SGR=(bool)*pRN21S05SGR;
+  _RN21S05SYM=(bool)*pRN21S05SYM;
+  _RN21S05SYR=(bool)*pRN21S05SYR;
+  _RN21S06SGM=(bool)*pRN21S06SGM;
+  _RN21S06SGR=(bool)*pRN21S06SGR;
+  _RN21S06SYM=(bool)*pRN21S06SYM;
+  _RN21S06SYR=(bool)*pRN21S06SYR;
+  };
+
+  void Write_Sig()
+  {
+	////// сигналы DI 
+  *pRN17D01SA1=(char)_RN17D01SA1;
+  *pRN17D01SA2=(char)_RN17D01SA2;
+  *pRN21S05SA1=(char)_RN21S05SA1;
+  *pRN21S05SA2=(char)_RN21S05SA2;
+  *pRN21S06SA1=(char)_RN21S06SA1;
+  *pRN21S06SA2=(char)_RN21S06SA2;
+	////// сигналы DO 
+  *pRN21S05NN=(char)_RN21S05NN;
+  *pRN21S05SG=(char)_RN21S05SG;
+  *pRN21S05SO=(char)_RN21S05SO;
+  *pRN21S05SY=(char)_RN21S05SY;
+  *pRN21S05SZ=(char)_RN21S05SZ;
+  *pRN21S06NN=(char)_RN21S06NN;
+  *pRN21S06SG=(char)_RN21S06SG;
+  *pRN21S06SO=(char)_RN21S06SO;
+  *pRN21S06SY=(char)_RN21S06SY;
+  *pRN21S06SZ=(char)_RN21S06SZ;
+	////// сигналы PFD 
+  *pRN21S05SGM=(char)_RN21S05SGM;
+  *pRN21S05SGR=(char)_RN21S05SGR;
+  *pRN21S05SYM=(char)_RN21S05SYM;
+  *pRN21S05SYR=(char)_RN21S05SYR;
+  *pRN21S06SGM=(char)_RN21S06SGM;
+  *pRN21S06SGR=(char)_RN21S06SGR;
+  *pRN21S06SYM=(char)_RN21S06SYM;
+  *pRN21S06SYR=(char)_RN21S06SYR;
+  };

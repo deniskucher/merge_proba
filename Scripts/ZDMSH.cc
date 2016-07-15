@@ -1,0 +1,13 @@
+#include "uobjects.h"
+#include "globals.h"
+#include "ZDMSH.h"
+
+void _ZDMSH()
+{
+  bool _2PMC = false;
+  bool _2PMG = false;
+   
+  _takt_tc->_TAKT(_2PMC,_2PMG);
+  _RN21S05->_ZDMSH(_RN21S05SGR,_RN21S05SGM,_RN21S05SYR,_RN21S05SYM,_2PMC,_RN21S05SG,_RN21S05SY);
+  _RN21S06->_ZDMSH(_RN21S06SGR,_RN21S06SGM,_RN21S06SYR,_RN21S06SYM,_2PMC,_RN21S06SG,_RN21S06SY);
+}
